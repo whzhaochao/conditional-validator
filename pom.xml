@@ -7,7 +7,7 @@
 
     <groupId>com.github.microtweak</groupId>
     <artifactId>conditional-validator</artifactId>
-    <version>2.0.0-rc2</version>
+    <version>2.0.1</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -77,6 +77,8 @@
 
         <!-- Testing -->
         <junit.version>5.9.3</junit.version>
+
+        <spring-expression.version>6.2.0</spring-expression.version>
     </properties>
 
     <distributionManagement>
@@ -92,6 +94,14 @@
 
     <dependencyManagement>
         <dependencies>
+
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-expression</artifactId>
+                <version>${spring-expression.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
@@ -105,11 +115,7 @@
                 <version>${commons-lang3.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-jexl3</artifactId>
-                <version>${commons-jexl3.version}</version>
-            </dependency>
+
 
             <dependency>
                 <groupId>org.slf4j</groupId>
